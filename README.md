@@ -185,4 +185,4 @@ ruff check .            # проверка стиля PEP-8
 
 Зудин Ф. — *Интерпретируемый инструмент автоматического выбора метода борьбы
 с дисбалансом классов*. РУДН, ФИИ, кафедра прикладного ИИ, 2026.
-Репозиторий: https://github.com/<username>/imbalance-advisor
+Репозиторий: https://github.com/Filzud/imbalance-advisor
