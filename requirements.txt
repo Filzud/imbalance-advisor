@@ -1,0 +1,25 @@
+# Runtime-зависимости проекта (Python 3.11+).
+# Версии зафиксированы и взаимно совместимы (numpy<2 для связки shap+pymfe+imblearn).
+# Dev-инструменты (streamlit, optuna, pytest, ruff) — см. requirements-dev.txt.
+
+# --- ядро / данные ---
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.13.1
+
+# --- ML ---
+scikit-learn==1.5.1
+imbalanced-learn==0.12.3
+
+# --- мета-признаки и корпус датасетов ---
+pymfe==0.4.3
+openml==0.15.1
+
+# --- интерпретация ---
+shap==0.46.0
+
+# --- визуализация ---
+matplotlib==3.9.2
+
+# --- сериализация моделей ---
+joblib==1.4.2

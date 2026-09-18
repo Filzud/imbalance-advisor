@@ -1,0 +1,22 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.ruff_cache/
+.venv/
+venv/
+
+# --- тяжёлые артефакты (регенерируются пайплайном) ---
+data/raw/
+data/processed/
+data/cache/
+data/*.npz
+models/*.joblib
+logs/*.log
+logs/*.out
+
+# ВНИМАНИЕ: data/*.csv В РЕПОЗИТОРИИ ОСТАЮТСЯ (результаты экспериментов).

@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "imbalance-method-recommender"
+version = "0.1.0"
+description = "Интерпретируемый инструмент автоматического выбора метода борьбы с дисбалансом классов на основе мета-признаков"
+requires-python = ">=3.11"
+readme = "README.md"
+
+# --------------------------------------------------------------------------- #
+# pytest + coverage                                                           #
+# --------------------------------------------------------------------------- #
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "--cov=src --cov-report=term-missing"
+
+[tool.coverage.run]
+source = ["src"]
+branch = true
+
+[tool.coverage.report]
+# Целевое покрытие по методичке — не ниже 80%.
+fail_under = 80
+show_missing = true
+
+# --------------------------------------------------------------------------- #
+# ruff (PEP-8 линтер/форматтер)                                               #
+# --------------------------------------------------------------------------- #
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B"]
+# X / X_proc — общепринятое в ML обозначение матрицы признаков; не нарушаем
+# конвенцию ради pep8-naming.
+ignore = ["N803", "N806"]
